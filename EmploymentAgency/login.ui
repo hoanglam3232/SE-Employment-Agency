@@ -6,19 +6,22 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>221</width>
+    <height>323</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Login</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(254, 253, 255);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="login_form" native="true">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>130</y>
+      <x>20</x>
+      <y>10</y>
       <width>181</width>
       <height>131</height>
      </rect>
@@ -49,8 +52,8 @@
    <widget class="QWidget" name="buttons" native="true">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>280</y>
+      <x>20</x>
+      <y>160</y>
       <width>181</width>
       <height>112</height>
      </rect>
@@ -125,7 +128,7 @@ background-color: rgb(134, 197, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>221</width>
      <height>21</height>
     </rect>
    </property>
