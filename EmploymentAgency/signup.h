@@ -25,6 +25,11 @@ public:
 
     ~signUp();
 
+private slots:
+    void on_backButton_clicked();
+
+    void on_signupButton_clicked();
+
 private:
     Ui::signUp *ui;
 

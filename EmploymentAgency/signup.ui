@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>signUp</class>
  <widget class="QDialog" name="signUp">
@@ -12,6 +13,151 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="formLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>59</x>
+     <y>19</y>
+     <width>261</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="signup_form">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_email">
+      <property name="text">
+       <string>Email</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="edit_email"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_pass">
+      <property name="text">
+       <string>Password</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="edit_pass"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_confPass">
+      <property name="text">
+       <string>Confirm Password</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="edit_confirmPass"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_contact">
+      <property name="text">
+       <string>Contact</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLineEdit" name="edit_contact"/>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_DoB">
+      <property name="text">
+       <string>Date of Birth</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QDateEdit" name="dateEdit_DoB"/>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_gender">
+      <property name="text">
+       <string>Gender</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QComboBox" name="comboBox_gender">
+      <item>
+       <property name="text">
+        <string>Male</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Female</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Other</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_type">
+      <property name="text">
+       <string>Type of User</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QComboBox" name="comboBox_type">
+      <item>
+       <property name="text">
+        <string>Recruiter</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Job Seeker</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>220</y>
+     <width>158</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="buttons">
+    <item>
+     <widget class="QPushButton" name="signupButton">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(131, 233, 255);</string>
+      </property>
+      <property name="text">
+       <string>Sign Up</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="backButton">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(2, 34, 94);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
  </widget>
  <resources/>
  <connections/>
