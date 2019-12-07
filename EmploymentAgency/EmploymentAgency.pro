@@ -17,15 +17,21 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    login.cpp
+    login.cpp \
+    signup.cpp
 
 HEADERS += \
-    login.h
+    login.h \
+    signup.h
 
 FORMS += \
-    login.ui
+    login.ui \
+    signup.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    RoundCornerButton.qml
