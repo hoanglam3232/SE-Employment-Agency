@@ -27,6 +27,21 @@ public:
     int getID();
     void setSession(int ID, int Type);
 
+private slots:
+    void on_button_reload_clicked();
+
+    void on_button_search_clicked();
+
+    void on_button_toggleEditMode_clicked();
+
+    void on_button_addExp_clicked();
+
+    void on_button_delExp_clicked();
+
+    void on_button_addEdu_clicked();
+
+    void on_button_delEdu_clicked();
+
 private:
     Ui::seekerProfile *ui;
     
