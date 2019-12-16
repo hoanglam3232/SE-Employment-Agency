@@ -18,16 +18,22 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     main.cpp \
     login.cpp \
+    seekereducation.cpp \
+    seekerexperience.cpp \
     seekerprofile.cpp \
     signup.cpp
 
 HEADERS += \
     login.h \
+    seekereducation.h \
+    seekerexperience.h \
     seekerprofile.h \
     signup.h
 
 FORMS += \
     login.ui \
+    seekereducation.ui \
+    seekerexperience.ui \
     seekerprofile.ui \
     signup.ui
 
