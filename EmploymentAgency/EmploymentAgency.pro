@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -17,15 +17,30 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    login.cpp
+    login.cpp \
+    seekereducation.cpp \
+    seekerexperience.cpp \
+    seekerprofile.cpp \
+    signup.cpp
 
 HEADERS += \
-    login.h
+    login.h \
+    seekereducation.h \
+    seekerexperience.h \
+    seekerprofile.h \
+    signup.h
 
 FORMS += \
-    login.ui
+    login.ui \
+    seekereducation.ui \
+    seekerexperience.ui \
+    seekerprofile.ui \
+    signup.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    RoundCornerButton.qml
