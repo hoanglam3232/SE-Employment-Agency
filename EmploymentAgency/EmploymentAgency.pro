@@ -18,14 +18,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     main.cpp \
     login.cpp \
+    seekerprofile.cpp \
     signup.cpp
 
 HEADERS += \
     login.h \
+    seekerprofile.h \
     signup.h
 
 FORMS += \
     login.ui \
+    seekerprofile.ui \
     signup.ui
 
 # Default rules for deployment.
