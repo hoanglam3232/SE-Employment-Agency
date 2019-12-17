@@ -16,26 +16,35 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    location.cpp \
     main.cpp \
     login.cpp \
+    recruiterprofile.cpp \
     seekereducation.cpp \
     seekerexperience.cpp \
     seekerprofile.cpp \
-    signup.cpp
+    signup.cpp \
+    vacancy.cpp
 
 HEADERS += \
+    location.h \
     login.h \
+    recruiterprofile.h \
     seekereducation.h \
     seekerexperience.h \
     seekerprofile.h \
-    signup.h
+    signup.h \
+    vacancy.h
 
 FORMS += \
+    location.ui \
     login.ui \
+    recruiterprofile.ui \
     seekereducation.ui \
     seekerexperience.ui \
     seekerprofile.ui \
-    signup.ui
+    signup.ui \
+    vacancy.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
