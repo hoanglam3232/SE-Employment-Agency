@@ -20,6 +20,7 @@ SOURCES += \
     main.cpp \
     login.cpp \
     recruiterprofile.cpp \
+    search.cpp \
     seekereducation.cpp \
     seekerexperience.cpp \
     seekerprofile.cpp \
@@ -30,6 +31,7 @@ HEADERS += \
     location.h \
     login.h \
     recruiterprofile.h \
+    search.h \
     seekereducation.h \
     seekerexperience.h \
     seekerprofile.h \
@@ -40,6 +42,7 @@ FORMS += \
     location.ui \
     login.ui \
     recruiterprofile.ui \
+    search.ui \
     seekereducation.ui \
     seekerexperience.ui \
     seekerprofile.ui \

@@ -39,7 +39,7 @@ private slots:
 private:
     Ui::Vacancy *ui;
 
-    // TODO include location model
+    QSqlQueryModel *location_model;
 
     // Get Vacancy ID
     void CounterInit();

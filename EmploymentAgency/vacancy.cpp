@@ -1,7 +1,7 @@
 #include "vacancy.h"
 #include "ui_vacancy.h"
 #include "recruiterprofile.h"
-// TODO add location
+#include "location.h"
 
 Vacancy::Vacancy(QWidget *parent) :
     QDialog(parent),
@@ -9,7 +9,10 @@ Vacancy::Vacancy(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    // TODO add location view model
+    // Location view model
+    location_model = new QSqlQueryModel;
+    ui->tableView_locations->setSelectionBehavior(QAbstractItemView::SelectRows); // select items as rows
+
 }
 
 Vacancy::~Vacancy()
@@ -166,12 +169,27 @@ void Vacancy::on_button_addVacancy_clicked()
 
 void Vacancy::on_button_addLocation_clicked()
 {
-
+    Location *newLocation = new Location(this, this->id, true);
+    newLocation->setModal(true);
+    newLocation->exec();
 }
 
 void Vacancy::on_button_delLocation_clicked()
 {
+    if (ui->tableView_locations->selectionModel()->currentIndex().isValid()) {
+        int rowIndex = ui->tableView_locations->selectionModel()->currentIndex().row();
+        QSqlQuery query;
 
+        query.prepare("DELETE FROM vacancy_location WHERE vacancy_id = :id AND street_addr = :addr AND ward = :ward AND district = :district AND city = :city");
+        query.bindValue(":id", this->id);
+        query.bindValue(":addr", location_model->index(rowIndex, 0).data().toString());
+        query.bindValue(":ward", location_model->index(rowIndex, 1).data().toString());
+        query.bindValue(":district", location_model->index(rowIndex, 2).data().toString());
+        query.bindValue(":city", location_model->index(rowIndex, 3).data().toString());
+
+        if (query.exec())
+            loadLocation();
+    }
 }
 
 void Vacancy::CounterInit()
