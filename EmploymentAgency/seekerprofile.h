@@ -5,7 +5,9 @@
 #include <QSqlQuery>
 #include <QDebug>
 
-// TODO include edu and exp
+#include "seekereducation.h"
+#include "seekerexperience.h"
+// TODO add search
 
 namespace Ui {
 class seekerProfile;
@@ -45,7 +47,10 @@ private slots:
 private:
     Ui::seekerProfile *ui;
     
-    // TODO add edu & exp model
+    QSqlQueryModel *edu_model;
+    QSqlQueryModel *exp_model;
+
+    // TODO add search
     
     int sessionID, sessionType;
     bool editMode; // 1: read/write; 0: read only
