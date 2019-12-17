@@ -25,6 +25,8 @@ SOURCES += \
     seekerexperience.cpp \
     seekerprofile.cpp \
     signup.cpp \
+    signuprecruiter.cpp \
+    signupseeker.cpp \
     vacancy.cpp
 
 HEADERS += \
@@ -36,6 +38,8 @@ HEADERS += \
     seekerexperience.h \
     seekerprofile.h \
     signup.h \
+    signuprecruiter.h \
+    signupseeker.h \
     vacancy.h
 
 FORMS += \
@@ -47,6 +51,8 @@ FORMS += \
     seekerexperience.ui \
     seekerprofile.ui \
     signup.ui \
+    signuprecruiter.ui \
+    signupseeker.ui \
     vacancy.ui
 
 # Default rules for deployment.
