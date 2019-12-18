@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Seeker Profile</string>
   </property>
   <widget class="QPushButton" name="button_logOut">
    <property name="geometry">
@@ -38,7 +38,7 @@
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
    </property>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <layout class="QGridLayout" name="gridLayout">
      <item row="4" column="0" colspan="3">
       <widget class="QPlainTextEdit" name="edit_desc"/>
@@ -169,7 +169,7 @@
     <property name="orientation">
      <enum>Qt::Vertical</enum>
     </property>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
        <widget class="QTableView" name="tableView_edu"/>
@@ -194,7 +194,7 @@
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
        <widget class="QTableView" name="tableView_exp"/>

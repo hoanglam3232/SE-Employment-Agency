@@ -27,6 +27,7 @@ SOURCES += \
     signup.cpp \
     signuprecruiter.cpp \
     signupseeker.cpp \
+    staff.cpp \
     vacancy.cpp
 
 HEADERS += \
@@ -40,6 +41,7 @@ HEADERS += \
     signup.h \
     signuprecruiter.h \
     signupseeker.h \
+    staff.h \
     vacancy.h
 
 FORMS += \
@@ -53,6 +55,7 @@ FORMS += \
     signup.ui \
     signuprecruiter.ui \
     signupseeker.ui \
+    staff.ui \
     vacancy.ui
 
 # Default rules for deployment.

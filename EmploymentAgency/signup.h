@@ -2,9 +2,12 @@
 #define SIGNUP_H
 
 #include <QDialog>
-#include <QtSql/QSqlDatabase>
+#include <QtSql>
+#include <QSqlDatabase>
 #include <QMessageBox>
 
+#include <signuprecruiter.h>
+#include <signupseeker.h>
 
 namespace Ui {
 class signUp;
@@ -32,6 +35,9 @@ private slots:
 
 private:
     Ui::signUp *ui;
+
+    signUpSeeker *ui_app;
+    signUpRecruiter *ui_rec;
 
     // Counts number of insertions
     int counter;
