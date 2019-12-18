@@ -152,7 +152,10 @@ void recruiterProfile::on_button_reload_clicked()
 
 void recruiterProfile::on_button_search_clicked()
 {
-
+    this->hide();
+    searcher = new Search(this);
+    searcher->setSession(this->sessionID, this->sessionType);
+    searcher->show();
 }
 
 void recruiterProfile::on_button_toggleEditMode_clicked()

@@ -3,7 +3,9 @@
 
 #include <QMainWindow>
 #include <signup.h>
-
+#include "seekerprofile.h"
+#include "recruiterprofile.h"
+#include "staff.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Login; }
@@ -34,5 +36,8 @@ private:
 
     void connectDatabase();
 
+    void getSeekerProfile(int db_id);
+    void getRecruiterProfile(int db_id);
+    void getStaffProfile(int db_id);
 };
 #endif // LOGIN_H

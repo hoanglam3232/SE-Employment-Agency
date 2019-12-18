@@ -3,7 +3,7 @@
 
 #include <QDialog>
 #include "vacancy.h"
-// TODO add search
+#include "search.h"
 
 namespace Ui {
 class recruiterProfile;
@@ -47,7 +47,7 @@ private:
     QSqlQueryModel *applicant_model;
 
     Vacancy *vacancy;
-    // TODO add search
+    Search *searcher;
 
     int editMode; // 1 is read-only, 0 is read/write
     int view; // -1 is owner, 0 is standard_view, 1 is seeker_view

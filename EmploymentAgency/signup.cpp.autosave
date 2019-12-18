@@ -119,6 +119,8 @@ void signUp::on_signupButton_clicked()
             ui_rec->show();
         } else qDebug() << "not rec or seek failed";
     }
-    else
+    else {
         qDebug() << "signup.cpp query failed";
+        counter--;
+    }
 }

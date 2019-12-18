@@ -23,7 +23,7 @@ seekerProfile::seekerProfile(QWidget *parent, int accID, int view) :
     loadExp();
     
     // Visitor view (no button)
-    if (view == 0) {
+    if (view == 1) {
         // Close all buttons
         ui->button_addEdu->close();
         ui->button_addExp->close();
@@ -36,7 +36,7 @@ seekerProfile::seekerProfile(QWidget *parent, int accID, int view) :
     }
     
     // Edit mode starts at read only
-    editMode = false;
+    editMode = true;
 }
 
 seekerProfile::~seekerProfile()
@@ -143,11 +143,15 @@ void seekerProfile::on_button_reload_clicked()
 void seekerProfile::on_button_search_clicked()
 {
     // Show search menu
+    this->hide();
+    searcher = new Search(this, 1);
+    searcher->setSession(this->sessionID, this->sessionType);
+    searcher->show();
 }
 
 void seekerProfile::on_button_toggleEditMode_clicked()
 {
-    editMode ^= 0;
+    editMode ^= 1;
     
     // set edit mode accordingly
     ui->edit_dob->setReadOnly(editMode);
@@ -231,4 +235,11 @@ void seekerProfile::on_button_delEdu_clicked()
         if (query.exec())
             loadEdu();
     }
+}
+
+void seekerProfile::on_button_logOut_clicked()
+{
+    this->hide();
+    parentWidget()->show();
+    delete ui;
 }

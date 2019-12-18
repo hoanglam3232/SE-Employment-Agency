@@ -2,6 +2,7 @@
 #include "ui_staff.h"
 
 #include <QMessageBox>
+#include <QDate>
 
 Staff::Staff(QWidget *parent, int id) :
     QDialog(parent),
@@ -48,7 +49,7 @@ void Staff::updateApproval(int vacancyID)
                   + QString("VALUES(:staff_id, :vacancy_id, :approval_date, :staff_decision, :details)"));
     query.bindValue(":staff_id", this->id);
     query.bindValue(":vacancy_id", vacancyID);
-    query.bindValue(":approval_date", this->id);
+    query.bindValue(":approval_date", QDate::currentDate());
     query.bindValue(":staff_decision", 1);
     query.bindValue(":details", "");
 }

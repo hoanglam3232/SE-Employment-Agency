@@ -7,7 +7,7 @@
 
 #include "seekereducation.h"
 #include "seekerexperience.h"
-// TODO add search
+#include "search.h"
 
 namespace Ui {
 class seekerProfile;
@@ -21,7 +21,7 @@ public:
     // There should be 2 views, 
     // the account owner view (editable) 
     // and visitor view (non-editable).
-    explicit seekerProfile(QWidget *parent = nullptr, int id = -1, int view = 1);
+    explicit seekerProfile(QWidget *parent = nullptr, int id = -1, int view = 0);
     ~seekerProfile();
     void loadProf();
     void loadEdu();
@@ -44,16 +44,18 @@ private slots:
 
     void on_button_delEdu_clicked();
 
+    void on_button_logOut_clicked();
+
 private:
     Ui::seekerProfile *ui;
     
     QSqlQueryModel *edu_model;
     QSqlQueryModel *exp_model;
 
-    // TODO add search
-    
+    Search *searcher;
+
     int sessionID, sessionType;
-    bool editMode; // 1: read/write; 0: read only
+    bool editMode; // 0: read/write; 1: read only
     int id; // accID
 };
 
